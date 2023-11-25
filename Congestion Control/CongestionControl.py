@@ -25,12 +25,10 @@ class CongestionControl:
         return random.random() > self.loss_probability
 
     def send_packet(self):
-        # Send packet over the network
         if self.ws < self.max_ws:
             self.ws += self.increase_factor
 
     def receive_ack(self, transmission):
-        # Receive acknowledgement from the receiver
         if transmission:
             if self.ws < self.threshold:
                 self.ws += 1
