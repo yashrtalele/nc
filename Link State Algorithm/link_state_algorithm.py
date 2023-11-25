@@ -13,7 +13,7 @@ class LinkStateAlgorithm:
     def calculate_shortest_path(self, gph, graph, source, destination):
         dj = Dijkstra()
         previous_nodes, shortest_path = dj.dijkstra(gph = gph, graph = graph, nodes = self.nodes, start_node = source)
-        dj.print_result(previous_nodes, shortest_path, start_node=source, target_node=destination)
+        dj.print_path(previous_nodes, shortest_path, start_node=source, target_node=destination)
 
 def main():
     file_name = "test_linkstate.txt"

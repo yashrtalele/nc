@@ -24,7 +24,7 @@ class Dijkstra:
             unvisited_nodes.remove(curr_min)
         return prev_node, shortest_path
 
-    def print_result(self, prev_node, shortest_path, start_node, target_node):
+    def print_path(self, prev_node, shortest_path, start_node, target_node):
         path = []
         node = target_node
         while node != start_node:
